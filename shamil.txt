@@ -1,0 +1,48 @@
+"""hai
+how are you
+what you want
+what can i do for you""""
+Here's a Python function that counts the number of vowels in a given string:
+
+```
+def count_vowels(s):
+    return sum(1 for c in s.lower() if c in 'aeiou')
+```
+
+Explanation:
+
+- `s.lower()`: converts the string to lowercase for case-insensitive comparison
+- `c in 'aeiou'`: checks if each character is a vowel
+- `sum(...)`: counts the total number of vowels
+
+Example usage:
+
+```
+print(count_vowels("Hello World"))  # Output: 3
+```
+
+Alternatively, you can use regular expressions:
+
+```
+import re
+
+def count_vowels(s):
+    return len(re.findall('[aeiou]', s, flags=re.IGNORECASE))
+```
+
+Or, using a more traditional loop approach:
+
+```
+def count_vowels(s):
+    count = 0
+    for c in s.lower():
+        if c in 'aeiou':
+            count += 1
+    return count
+```
+
+All of these functions will give the same result.
+
+If you want to count vowels in a specific case (e.g., only uppercase or lowercase), adjust the comparison accordingly.
+
+Would you like any modifications or additional functionality
